@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/abc"
+        android:scaleType="centerCrop"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_left"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_right"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_bottom"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp"/>
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/image_songs"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:maxLines="1"
+        android:text="Pankaj Madanrao Kathikar"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/image_songs"
+        app:layout_constraintLeft_toRightOf="@+id/image_songs"
+        android:id="@+id/textview_name"
+        android:includeFontPadding="false"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:id="@+id/image_emoji"
+        app:layout_constraintBottom_toBottomOf="@id/image_songs"
+        app:layout_constraintLeft_toRightOf="@+id/textview_name"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_songs"
+        app:layout_constraintLeft_toRightOf="@id/image_emoji"
+        android:includeFontPadding="false"
+        android:text="EMOJI PICTURE"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textview_name"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        android:text="Challenge now and tag us........"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/white"
+        android:includeFontPadding="false"/>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_emoji"
+        app:layout_constraintRight_toRightOf="@id/guideline_right"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginBottom="18dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class HomeAdapterRecycleView extends RecyclerView.Adapter<HomeViewHolderRecycleView> {
@@ -40,7 +42,11 @@ public class HomeAdapterRecycleView extends RecyclerView.Adapter<HomeViewHolderR
         ImageView imageView6=holder.itemView.findViewById(R.id.imageview_pin_save);
         ImageView imageView7=holder.itemView.findViewById(R.id.imageview_liked_photo);
         TextView textView1=holder.itemView.findViewById(R.id.textview_liked);
-        imageView.setImageResource(homePageAdapterRecycleView.getImage_view_story());
+        //imageView.setImageResource(homePageAdapterRecycleView.getImage_view_story());
+        Glide.with(context1)
+                .load(homePageAdapterRecycleView.getImage_view_story())
+                .circleCrop()
+                .into(imageView);
         textView.setText(homePageAdapterRecycleView.getText_view_title());
         imageView1.setImageResource(homePageAdapterRecycleView.getImage_view_dots());
         imageView2.setImageResource(homePageAdapterRecycleView.getImage_view_photo());
