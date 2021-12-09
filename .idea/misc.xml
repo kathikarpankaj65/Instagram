@@ -18,7 +18,7 @@
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.11930091185410334" />
         <entry key="app/src/main/res/layout/fragment_video_player.xml" value="0.11930091185410334" />
         <entry key="app/src/main/res/layout/recycleview_adapte_home.xml" value="0.15443840579710144" />
-        <entry key="app/src/main/res/layout/recycleview_adapte_video_player.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/recycleview_adapte_video_player.xml" value="0.25" />
         <entry key="app/src/main/res/menu/home_page_toolbar_menu_items.xml" value="0.2953703703703704" />
         <entry key="app/src/main/res/menu/my_navigation_items.xml" value="0.21296296296296297" />
         <entry key="app/src/main/res/menu/video_player_toolbar.xml" value="0.2953703703703704" />

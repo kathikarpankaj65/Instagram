@@ -7,7 +7,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/abc"
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/main_screen"
         android:scaleType="centerCrop"/>
 
     <androidx.constraintlayout.widget.Guideline
@@ -36,7 +37,8 @@
         android:layout_height="12dp"
         app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
         app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/music_note"
+        app:tint="@color/white"
         android:id="@+id/image_songs"/>
 
     <TextView
@@ -57,7 +59,8 @@
         android:id="@+id/image_emoji"
         app:layout_constraintBottom_toBottomOf="@id/image_songs"
         app:layout_constraintLeft_toRightOf="@+id/textview_name"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/stars"
+        app:tint="@color/white"
         android:layout_marginLeft="5dp"/>
 
     <TextView
@@ -69,6 +72,7 @@
         app:layout_constraintLeft_toRightOf="@id/image_emoji"
         android:includeFontPadding="false"
         android:text="EMOJI PICTURE"
+        android:id="@+id/text_emoji"
         android:textColor="@color/white"/>
 
     <TextView
@@ -78,15 +82,113 @@
         app:layout_constraintLeft_toLeftOf="@id/guideline_left"
         android:text="Challenge now and tag us........"
         android:layout_marginBottom="15dp"
+        android:id="@+id/text2"
         android:textColor="@color/white"
         android:includeFontPadding="false"/>
 
     <ImageView
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="@id/image_emoji"
         app:layout_constraintRight_toRightOf="@id/guideline_right"
         android:src="@drawable/ic_launcher_background"
-        android:layout_marginBottom="18dp"/>
+        android:scaleType="centerCrop"
+        android:id="@+id/image_photo"
+        android:layout_marginBottom="10dp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/image_profile"
+        app:layout_constraintBottom_toTopOf="@+id/text2"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/text2"
+        android:text="pankajkathikar"
+        android:layout_marginBottom="22dp"
+        android:id="@+id/text_profile_name"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@+id/image_profile"/>
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/text2"
+        app:layout_constraintLeft_toRightOf="@id/text_profile_name"
+        android:layout_marginBottom="22dp"
+        android:id="@+id/image_verified"
+        app:tint="@color/white"
+        android:src="@drawable/ic_baseline_verified_24"
+        android:layout_marginLeft="7dp"/>
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Follow"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="22dp"
+        android:id="@+id/text_follow"
+        android:layout_marginLeft="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/text2"
+        app:layout_constraintLeft_toRightOf="@id/image_verified"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/send"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/image_profile"
+        app:layout_constraintRight_toRightOf="@+id/guideline_right"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/image_share"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_message_count"
+        android:text="456"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/image_share"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="3dp"
+        app:layout_constraintRight_toRightOf="@+id/guideline_right"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/chat"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/text_view_message_count"
+        app:layout_constraintRight_toRightOf="@id/guideline_right"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/image_message"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_like_count"
+        android:textColor="@color/white"
+        android:text="456k"
+        app:layout_constraintBottom_toTopOf="@+id/image_message"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintRight_toRightOf="@+id/guideline_right"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:tint="@color/white"
+        android:src="@drawable/heart"
+        app:layout_constraintBottom_toTopOf="@id/text_view_like_count"
+        app:layout_constraintRight_toRightOf="@id/guideline_right"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/image_like"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -29,7 +30,12 @@ public class VideoPlayerFragment extends Fragment {
         toolbar.inflateMenu(R.menu.video_player_toolbar);
 
         RecyclerView recyclerView=view.findViewById(R.id.video_player_recycle_view);
-        recyclerView.setAdapter(new VideoPlayerAdapterRecycleView(getActivity()));
+        VideoPlayerPageViewModel videoPlayerPageViewModel=new VideoPlayerPageViewModel();
+        recyclerView.setAdapter(new VideoPlayerAdapterRecycleView(getActivity(),
+                videoPlayerPageViewModel.getVideoPlayerPageAdapterRecycleView()));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        PagerSnapHelper pagerSnapHelper=new PagerSnapHelper();
+        pagerSnapHelper.attachToRecyclerView(recyclerView);
     }
 }
